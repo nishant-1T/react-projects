@@ -23,6 +23,10 @@ import Github, { githubInfoLoader } from './views/ReactRouter-project/pages/Gith
 import MindLeapLayout from "./views/Mind-leap-project/Mind-leap-Layout.jsx";
 import Mind_Leap_Home from './views/Mind-leap-project/pages/Home.jsx'
 
+// Mind Leap projects components
+import TailwindLandingLayout from "./views/Tailwind-Landing-Page/Layout.jsx";
+import TailwindLandingPage from "./views/Tailwind-Landing-Page/LandingPage.jsx";
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -37,9 +41,12 @@ const router = createBrowserRouter(
         <Route loader={githubInfoLoader} path="github" element={<Github />} />
       </Route>
 
-
       <Route path="mind-leap/" element={<MindLeapLayout />}>
         <Route path="" element={<Mind_Leap_Home />} />
+      </Route>
+
+      <Route path="tailwind-landing-page/" element={<TailwindLandingLayout />}>
+        <Route path="" element={<TailwindLandingPage />} />
       </Route>
     </Route>
   )

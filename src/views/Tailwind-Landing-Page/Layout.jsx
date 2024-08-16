@@ -1,12 +1,16 @@
-// import React from 'react'
-import Navbar from './components/Navbar/Navbar';
-import '.App.css';
-const Layout = () => {
+import React from "react";
+import Navbar from './components/Navbar/Navbar.jsx'
+// import HeroSection from './components/HerSection/HeroSection.jsx'
+import { Outlet } from "react-router-dom";
+
+function Layout() {
   return (
-    <div>
-      <Navbar/>
-    </div>
-  )
+    <>
+     <Navbar/>
+     <Outlet/>
+    {/* <Footer/> */}
+    </>
+  );
 }
 
-export default Layout
+export default Layout;
