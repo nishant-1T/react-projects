@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'primary' : ["Poppins", "system-ui"],
+        'secondary': [ "Syne", "sans-serif"]
+      },
       colors:{
         'heroBg' :"#0e1122",
         'para': 'rgb(0 0 0 / 80%)',
