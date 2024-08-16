@@ -19,6 +19,10 @@ import Contact from './views/ReactRouter-project/pages/Contact/Contact.jsx'
 import User from './views/ReactRouter-project/pages/User/User.jsx'
 import Github, { githubInfoLoader } from './views/ReactRouter-project/pages/Github/Github.jsx'
 
+// Mind Leap projects components
+import MindLeapLayout from "./views/Mind-leap-project/Mind-leap-Layout.jsx";
+import Mind_Leap_Home from './views/Mind-leap-project/pages/Home.jsx'
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,6 +35,11 @@ const router = createBrowserRouter(
         <Route path="contact" element={<Contact />} />
         <Route path="user/:userid" element={<User />} />
         <Route loader={githubInfoLoader} path="github" element={<Github />} />
+      </Route>
+
+
+      <Route path="mind-leap/" element={<MindLeapLayout />}>
+        <Route path="" element={<Mind_Leap_Home />} />
       </Route>
     </Route>
   )
